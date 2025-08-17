@@ -64,11 +64,14 @@ const Agent = ({userName,userId,type,interviewId,questions}:AgentProps) => {
   const handleGenerateFeedback = async(messages:SavedMessage[]) => {
     console.log('generate feedback')
 
-    const {success,id} ={
+    const {success,id} = {
       success:true,
       id: 'feedback-id'
-    }
+    } 
+   
+
     if(success && id){
+      console.log('good saved feedback')
       router.push(`/interview/${interviewId}/feedback`)
     }
     else{
